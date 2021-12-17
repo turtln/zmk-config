@@ -51,7 +51,7 @@
 &trans &kp EXCL    &kp AT      &kp HASH     &kp DOLLAR    &kp PRCNT               &kp CARET &kp AMPS      &kp KP_MULTIPLY &kp LPAR    &kp RPAR    &trans
 &trans &mt LGUI N1 &mt LALT N2 &mt LCTRL N3 &mt LSHIFT N4 &kp N5                  &kp N6    &mt RSHIFT N7 &mt RCTRL N8    &mt RALT N9 &mt RGUI N0 &trans
 &trans &kp K_PASTE &kp K_COPY  &kp GRAVE    &kp APOS      &none     &trans &trans &kp MINUS &kp EQUAL     &kp LBKT        &kp RBKT    &kp BSLH    &trans
-                               &trans       &trans        &trans    &trans &trans &trans    &mo 3         &trans
+                               &trans       &trans        &trans    &trans &trans &trans    &trans        &trans
 			>;
 		};
 
@@ -61,7 +61,7 @@
 &trans &none    &none    &none     &none      &none                &kp C_MUTE &kp C_VOL_DN &kp UP    &kp C_VOL_UP &kp C_PP  &trans
 &trans &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none                &none      &kp LEFT     &kp DOWN  &kp RIGHT    &kp PSCRN &trans
 &trans &none    &none    &none     &none      &none  &trans &trans &kp HOME   &kp PG_DN    &kp PG_UP &kp END      &none     &trans
-                         &trans    &mo 3      &trans &trans &trans &trans     &trans       &trans
+                         &trans    &trans     &trans &trans &trans &trans     &trans       &trans
 			>;
 		};
 		
