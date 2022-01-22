@@ -1,0 +1,73 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+//#define KC_COPY &kp LC(C)
+//#define KC_PASTE &kp LC(V)
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define ADJUST  3
+
+&mt {
+	tapping-term-ms = <200>;
+	flavor = "tap-preferred";
+};
+
+/ {
+
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+			if-layers = <1 2>;
+			then-layer = <3>;
+		};
+	};
+	
+	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+			bindings = <
+&kp Q      &kp W      &kp E        &kp R        &kp T    &kp Y   &kp U        &kp I       &kp O      &kp P        
+&mt LGUI A &mt LALT S &mt LCTRL D  &mt LSHIFT F &kp G    &kp H   &mt RSHIFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI
+&kp Z      &kp X      &kp C        &kp V        &kp B    &kp N   &kp M        &kp COMMA   &kp DOT    &kp FSLH     
+                                   &lt 1 SPACE  &kp TAB  &kp RET &lt 2 BSPC
+			>;
+		};
+
+		lower_layer {
+			bindings = <
+&kp EXCL    &kp AT      &kp HASH     &kp DOLLAR    &kp PRCNT &kp CARET &kp AMPS      &kp KP_MULTIPLY &kp LPAR    &kp RPAR   
+&mt LGUI N1 &mt LALT N2 &mt LCTRL N3 &mt LSHIFT N4 &kp N5    &kp N6    &mt RSHIFT N7 &mt RCTRL N8    &mt RALT N9 &mt RGUI N0
+&kp K_PASTE &kp K_COPY  &kp GRAVE    &kp APOS      &none     &kp MINUS &kp EQUAL     &kp LBKT        &kp RBKT    &kp BSLH   
+                                     &trans        &kp ESC   &kp DEL   &trans
+			>;
+		};
+
+		raise_layer {
+			bindings = <
+&none    &none    &none     &none      &none  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp PSCRN
+&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none  &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &none
+&none    &none    &none     &none      &none  &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &none    
+                            &trans     &trans &trans     &trans
+			>;
+		};
+		
+		adjust_layer {
+			bindings = <
+&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &none  &none  &none         &none        &none       &none        
+&mt LGUI F1 &mt LALT F2  &mt LCTRL F3 &mt LSHIFT F4 &kp F5 &kp F6 &mt RSHIFT F7 &mt RCTRL F8 &mt RALT F9 &mt RGUI F10
+&kp F11     &kp F12      &none        &none         &none  &none  &none         &none        &none       &none       
+                                      &trans        &trans &trans &trans
+			>;
+		};		
+	};
+};
