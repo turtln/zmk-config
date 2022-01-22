@@ -48,16 +48,16 @@
 &kp EXCL    &kp AT      &kp HASH     &kp DOLLAR    &kp PRCNT &kp CARET &kp AMPS      &kp KP_MULTIPLY &kp LPAR    &kp RPAR   
 &mt LGUI N1 &mt LALT N2 &mt LCTRL N3 &mt LSHIFT N4 &kp N5    &kp N6    &mt RSHIFT N7 &mt RCTRL N8    &mt RALT N9 &mt RGUI N0
 &kp K_PASTE &kp K_COPY  &kp GRAVE    &kp APOS      &none     &kp MINUS &kp EQUAL     &kp LBKT        &kp RBKT    &kp BSLH   
-                                     &trans        &kp ESC   &kp DEL   &trans
+                                     &trans        &trans    &kp DEL   &trans
 			>;
 		};
 
 		raise_layer {
 			bindings = <
-&none    &none    &none     &none      &none  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp PSCRN
-&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none  &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &none
-&none    &none    &none     &none      &none  &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &none    
-                            &trans     &trans &trans     &trans
+&none    &none    &none     &none      &none   &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp PSCRN
+&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none   &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &none
+&none    &none    &none     &none      &none   &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &none    
+                            &trans     &kp ESC &trans     &trans
 			>;
 		};
 		
