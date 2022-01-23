@@ -31,7 +31,7 @@
 			layers = <0>;
             bindings = <&caps_word>;
         };
-d    };
+    };
 };
 
 / {
