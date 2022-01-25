@@ -14,8 +14,12 @@
 #define ADJUST  3
 
 &mt {
-	flavor = "tap-unless-interrupted";
+	flavor = "tap-preferred";
 	tapping-term-ms = <200>;
+	quick-tap-ms = <200>;
+};
+
+&lt {
 	quick-tap-ms = <200>;
 };
 
